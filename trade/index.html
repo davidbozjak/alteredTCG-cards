@@ -1,0 +1,185 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altered TCG Cards collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            justify-content: center;
+        }
+
+
+        .styled-table {
+            width: 100%;    
+            max-width: 250px; /* Adjust as needed */
+            border-collapse: collapse;
+            text-align: center;
+            background-color: #e6f7ff; /* Soothing light blue */
+            border: 1px solid #b3e0ff;
+        }
+
+        .styled-table td {
+            padding: 10px;
+            border-bottom: 1px solid #b3e0ff;
+        }
+
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .link {
+            color: #0077cc; /* Soft blue to match the theme */
+            text-decoration: none; /* Removes default underline */
+            font-weight: bold; /* Slight emphasis */
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        .link:hover, .link:focus {
+            color: #005fa3; /* Slightly darker on hover */
+            text-decoration: underline; /* Adds subtle emphasis */
+        }
+
+        .filter-bar {
+            position: fixed;
+            width: 80%;
+            max-width: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f0f8ff;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+
+        .filter-bar input[type="text"] {
+            flex: 1 1 200px; /* Grows and shrinks as needed */
+            min-width: 100px;
+        }
+
+        .filter-bar select {
+            flex: 1 1 150px; /* Grows and shrinks as needed */
+            min-width: 100px;
+        }
+
+        .wrapper {
+            width: 80%;
+            margin: auto;
+            padding-top: 60px; /* Creates space below the fixed filter */
+            overflow-y: auto; /* Enables scrolling */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="filter-bar">
+        <input type="text" id="searchBox" placeholder="Search Name..." onkeyup="filterItems()">
+        <select id="factionFilter" onchange="filterItems()">
+            <option value="">All Factions</option>
+            <option value="Axiom">Axiom</option>
+            <option value="Bravos">Bravos</option>
+            <option value="Lyra">Lyra</option>
+            <option value="Muna">Muna</option>
+            <option value="Ordis">Ordis</option>
+            <option value="Yzmir">Yzmir</option>
+            <option value="Neutral">Axiom</option>
+        </select>
+        <select id="rarityFilter" onchange="filterItems()">
+            <option value="">All Rarities</option>
+            <option value="Common">Common</option>
+            <option value="Rare">Rare</option>
+            <option value="Unique">Unique</option>
+        </select>
+<select id="card_owners_filter" onchange="filterItems()">
+<option value="">All Card Owners</option>
+<option value="pkaff_9132">pkaff_9132</option>
+<option value="lallemupp_8002">lallemupp_8002</option>
+</select>
+
+    </div>
+    <div class="wrapper">
+        <div class="container">
+
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Rare" data-name="Efrén, Puppet Master"  data-card_owners_filter="pkaff_9132">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_BISE_B_LY_56_R2" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/BISE/CARDS/ALT_BISE_B_LY_56/JPG/en_US/0216706bf8e3fd59f668763ce44ad146.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_BISE_B_LY_56_R2" class="link" target="_blank">Efrén, Puppet Master</a></td></tr>
+    <tr><td>Axiom</td></tr>
+    <tr><td>Rare</td></tr>
+<tr><td>pkaff_9132</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Common" data-name="Lord Kelvin"  data-card_owners_filter="pkaff_9132">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_AX_44_C" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_AX_44/JPG/en_US/f947dd30f653f2ad052982ec09d36563.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_AX_44_C" class="link" target="_blank">Lord Kelvin</a></td></tr>
+    <tr><td>Axiom</td></tr>
+    <tr><td>Common</td></tr>
+<tr><td>pkaff_9132</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Rare" data-name="Ratatoskr"  data-card_owners_filter="lallemupp_8002">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_CORE_B_BR_04_R2" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CORE/CARDS/ALT_CORE_B_BR_04/JPG/en_US/d9b6911299747ba971c985d959187e22.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_CORE_B_BR_04_R2" class="link" target="_blank">Ratatoskr</a></td></tr>
+    <tr><td>Ordis</td></tr>
+    <tr><td>Rare</td></tr>
+<tr><td>lallemupp_8002</td></tr>
+</table>
+
+        </div>
+    </div>
+    
+    <script>
+        function filterItems() {
+            let searchTextUserValue = document.getElementById("searchBox").value.trim().toLowerCase();
+            let factionUserValue = document.getElementById("factionFilter").value;
+            let rarityUserValue = document.getElementById("rarityFilter").value;
+let card_owners_filterUserValue = document.getElementById("card_owners_filter").value;
+
+            let items = document.querySelectorAll(".styled-table");
+
+            items.forEach(item => {
+                let itemFaction = item.getAttribute("data-faction");
+                let itemRarity = item.getAttribute("data-rarity");
+                let itemText = item.getAttribute("data-name");
+let item_card_owners_filter = item.getAttribute("data-card_owners_filter");
+let matches_card_owners_filter = card_owners_filterUserValue  === "" || item_card_owners_filter == card_owners_filterUserValue;
+                let matchesSearch = itemText.toLowerCase().includes(searchTextUserValue);
+                let matchesFaction = factionUserValue === "" || itemFaction === factionUserValue;
+                let matchesRarity = rarityUserValue === "" || itemRarity === rarityUserValue;
+    
+                item.style.display = matchesSearch && matchesFaction && matchesRarity && matches_card_owners_filter && 1 ? "" : "none";
+            });
+        }
+    </script>
+
+</body>
+</html>
+
