@@ -1,0 +1,284 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altered TCG Cards collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            justify-content: center;
+        }
+
+
+        .styled-table {
+            width: 100%;    
+            max-width: 250px; /* Adjust as needed */
+            border-collapse: collapse;
+            text-align: center;
+            background-color: #e6f7ff; /* Soothing light blue */
+            border: 1px solid #b3e0ff;
+        }
+
+        .styled-table td {
+            padding: 10px;
+            border-bottom: 1px solid #b3e0ff;
+        }
+
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .link {
+            color: #0077cc; /* Soft blue to match the theme */
+            text-decoration: none; /* Removes default underline */
+            font-weight: bold; /* Slight emphasis */
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        .link:hover, .link:focus {
+            color: #005fa3; /* Slightly darker on hover */
+            text-decoration: underline; /* Adds subtle emphasis */
+        }
+
+        .filter-bar {
+            position: fixed;
+            width: 80%;
+            max-width: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f0f8ff;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+
+        .filter-bar input[type="text"] {
+            flex: 1 1 200px; /* Grows and shrinks as needed */
+            min-width: 100px;
+        }
+
+        .filter-bar select {
+            flex: 1 1 150px; /* Grows and shrinks as needed */
+            min-width: 100px;
+        }
+
+        .wrapper {
+            width: 80%;
+            margin: auto;
+            padding-top: 60px; /* Creates space below the fixed filter */
+            overflow-y: auto; /* Enables scrolling */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="filter-bar">
+        <input type="text" id="searchBox" placeholder="Search Name..." onkeyup="filterItems()">
+        <select id="factionFilter" onchange="filterItems()">
+            <option value="">All Factions</option>
+            <option value="Axiom">Axiom</option>
+            <option value="Bravos">Bravos</option>
+            <option value="Lyra">Lyra</option>
+            <option value="Muna">Muna</option>
+            <option value="Ordis">Ordis</option>
+            <option value="Yzmir">Yzmir</option>
+            <option value="Neutral">Axiom</option>
+        </select>
+        <select id="rarityFilter" onchange="filterItems()">
+            <option value="">All Rarities</option>
+            <option value="Common">Common</option>
+            <option value="Rare">Rare</option>
+            <option value="Unique">Unique</option>
+        </select>
+<select id="first_seen_date_filter" onchange="filterItems()">
+<option value="">All First Seen Date</option>
+<option value="2025-8-3 18:45">2025-8-3 18:45</option>
+</select>
+
+    </div>
+    <div class="wrapper">
+        <div class="container">
+
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Vaike, Energy Pioneer"  data-first_seen_date_filter="2025-8-3 18:45">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_AX_35_U_10127" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_AX_35/UNIQUE/JPG/en_US/8311b290466c31ba0507c26982a9da24.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_AX_35_U_10127" class="link" target="_blank">Vaike, Energy Pioneer</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-8-3 18:45</td></tr>
+<tr><td>10 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Vaike, Energy Pioneer"  data-first_seen_date_filter="2025-8-3 18:45">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_AX_35_U_10878" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_AX_35/UNIQUE/JPG/en_US/b5bd493f5abeb0f6b9f0228ff452b80c.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_AX_35_U_10878" class="link" target="_blank">Vaike, Energy Pioneer</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-8-3 18:45</td></tr>
+<tr><td>4.5 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Vaike, Energy Pioneer"  data-first_seen_date_filter="2025-8-3 18:45">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_AX_35_U_6252" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_AX_35/UNIQUE/JPG/en_US/90aee25bae3e692f750e4a2da3c33028.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_AX_35_U_6252" class="link" target="_blank">Vaike, Energy Pioneer</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-8-3 18:45</td></tr>
+<tr><td>5.26 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Vaike, Energy Pioneer"  data-first_seen_date_filter="2025-8-3 18:45">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_AX_35_U_6460" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_AX_35/UNIQUE/JPG/en_US/3f6f2d9e454656a906a3890953d396f4.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_AX_35_U_6460" class="link" target="_blank">Vaike, Energy Pioneer</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-8-3 18:45</td></tr>
+<tr><td>5 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Vaike, Energy Pioneer"  data-first_seen_date_filter="2025-8-3 18:45">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_AX_35_U_8000" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_AX_35/UNIQUE/JPG/en_US/52a2902b5b6bb397aad07ebd28c77e9e.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_AX_35_U_8000" class="link" target="_blank">Vaike, Energy Pioneer</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-8-3 18:45</td></tr>
+<tr><td>5 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Walrus Scout"  data-first_seen_date_filter="2025-8-3 18:45">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_AX_36_U_2998" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_AX_36/UNIQUE/JPG/en_US/f51569795c93fd611b64e095d73d39e0.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_AX_36_U_2998" class="link" target="_blank">Walrus Scout</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-8-3 18:45</td></tr>
+<tr><td>5 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Magpeng Hoarder"  data-first_seen_date_filter="2025-8-3 18:45">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_LY_31_U_5566" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_LY_31/UNIQUE/JPG/en_US/4e2f70834cddfbbc4bb6f3025bf305d5.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_LY_31_U_5566" class="link" target="_blank">Magpeng Hoarder</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-8-3 18:45</td></tr>
+<tr><td>5 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Hound"  data-first_seen_date_filter="2025-8-3 18:45">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_33_U_4897" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_33/UNIQUE/JPG/en_US/ac9c692377873c4275d043fb6afa8e0f.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_33_U_4897" class="link" target="_blank">Hound</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-8-3 18:45</td></tr>
+<tr><td>9 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Moth Larva"  data-first_seen_date_filter="2025-8-3 18:45">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_YZ_32_U_11181" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_YZ_32/UNIQUE/JPG/en_US/c706670fae643f643db37044372737d9.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_YZ_32_U_11181" class="link" target="_blank">Moth Larva</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-8-3 18:45</td></tr>
+<tr><td>10 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Moth Larva"  data-first_seen_date_filter="2025-8-3 18:45">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_YZ_32_U_11566" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_YZ_32/UNIQUE/JPG/en_US/70090c0027ea84b70b27a13078759ac6.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_YZ_32_U_11566" class="link" target="_blank">Moth Larva</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-8-3 18:45</td></tr>
+<tr><td>10 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Moth Larva"  data-first_seen_date_filter="2025-8-3 18:45">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_YZ_32_U_6977" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_YZ_32/UNIQUE/JPG/en_US/dacd0f6b70b5da8c6b443f922c89023d.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_YZ_32_U_6977" class="link" target="_blank">Moth Larva</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-8-3 18:45</td></tr>
+<tr><td>10 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="The Grems"  data-first_seen_date_filter="2025-8-3 18:45">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_BISE_B_AX_53_U_2703" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/BISE/CARDS/ALT_BISE_B_AX_53/UNIQUE/JPG/en_US/deb99cf4c9066033d869aad359f56785.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_BISE_B_AX_53_U_2703" class="link" target="_blank">The Grems</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-8-3 18:45</td></tr>
+<tr><td>6 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="The Grems"  data-first_seen_date_filter="2025-8-3 18:45">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_BISE_B_AX_53_U_3273" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/BISE/CARDS/ALT_BISE_B_AX_53/UNIQUE/JPG/en_US/3aa864db178b9321ddfa4943397d4351.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_BISE_B_AX_53_U_3273" class="link" target="_blank">The Grems</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-8-3 18:45</td></tr>
+<tr><td>5 USD</td></tr>
+</table>
+
+        </div>
+    </div>
+    
+    <script>
+        function filterItems() {
+            let searchTextUserValue = document.getElementById("searchBox").value.trim().toLowerCase();
+            let factionUserValue = document.getElementById("factionFilter").value;
+            let rarityUserValue = document.getElementById("rarityFilter").value;
+let first_seen_date_filterUserValue = document.getElementById("first_seen_date_filter").value;
+
+            let items = document.querySelectorAll(".styled-table");
+
+            items.forEach(item => {
+                let itemFaction = item.getAttribute("data-faction");
+                let itemRarity = item.getAttribute("data-rarity");
+                let itemText = item.getAttribute("data-name");
+let item_first_seen_date_filter = item.getAttribute("data-first_seen_date_filter");
+let matches_first_seen_date_filter = first_seen_date_filterUserValue  === "" || item_first_seen_date_filter == first_seen_date_filterUserValue;
+                let matchesSearch = itemText.toLowerCase().includes(searchTextUserValue);
+                let matchesFaction = factionUserValue === "" || itemFaction === factionUserValue;
+                let matchesRarity = rarityUserValue === "" || itemRarity === rarityUserValue;
+    
+                item.style.display = matchesSearch && matchesFaction && matchesRarity && matches_first_seen_date_filter && 1 ? "" : "none";
+            });
+        }
+    </script>
+
+</body>
+</html>
+
