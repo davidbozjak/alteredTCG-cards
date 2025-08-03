@@ -1,0 +1,434 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altered TCG Cards collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            justify-content: center;
+        }
+
+
+        .styled-table {
+            width: 100%;    
+            max-width: 250px; /* Adjust as needed */
+            border-collapse: collapse;
+            text-align: center;
+            background-color: #e6f7ff; /* Soothing light blue */
+            border: 1px solid #b3e0ff;
+        }
+
+        .styled-table td {
+            padding: 10px;
+            border-bottom: 1px solid #b3e0ff;
+        }
+
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .link {
+            color: #0077cc; /* Soft blue to match the theme */
+            text-decoration: none; /* Removes default underline */
+            font-weight: bold; /* Slight emphasis */
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        .link:hover, .link:focus {
+            color: #005fa3; /* Slightly darker on hover */
+            text-decoration: underline; /* Adds subtle emphasis */
+        }
+
+        .filter-bar {
+            position: fixed;
+            width: 80%;
+            max-width: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f0f8ff;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+
+        .filter-bar input[type="text"] {
+            flex: 1 1 200px; /* Grows and shrinks as needed */
+            min-width: 100px;
+        }
+
+        .filter-bar select {
+            flex: 1 1 150px; /* Grows and shrinks as needed */
+            min-width: 100px;
+        }
+
+        .wrapper {
+            width: 80%;
+            margin: auto;
+            padding-top: 60px; /* Creates space below the fixed filter */
+            overflow-y: auto; /* Enables scrolling */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="filter-bar">
+        <input type="text" id="searchBox" placeholder="Search Name..." onkeyup="filterItems()">
+        <select id="factionFilter" onchange="filterItems()">
+            <option value="">All Factions</option>
+            <option value="Axiom">Axiom</option>
+            <option value="Bravos">Bravos</option>
+            <option value="Lyra">Lyra</option>
+            <option value="Muna">Muna</option>
+            <option value="Ordis">Ordis</option>
+            <option value="Yzmir">Yzmir</option>
+            <option value="Neutral">Axiom</option>
+        </select>
+        <select id="rarityFilter" onchange="filterItems()">
+            <option value="">All Rarities</option>
+            <option value="Common">Common</option>
+            <option value="Rare">Rare</option>
+            <option value="Unique">Unique</option>
+        </select>
+<select id="first_seen_date_filter" onchange="filterItems()">
+<option value="">All First Seen Date</option>
+<option value="2025-8-3 14:02">2025-8-3 14:02</option>
+</select>
+
+    </div>
+    <div class="wrapper">
+        <div class="container">
+
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Overseer"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_10563" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_34/UNIQUE/JPG/en_US/acaf4f40015acbf16153507594eddee0.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_10563" class="link" target="_blank">Ordis Overseer</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>120 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Overseer"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_6214" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_34/UNIQUE/JPG/en_US/0d6e2d0821da3a048c79ed6e26800829.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_6214" class="link" target="_blank">Ordis Overseer</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>10 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Nightwarden"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_10191" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_36/UNIQUE/JPG/en_US/39bdd2fef3f198b362daf2dbd8768f1e.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_10191" class="link" target="_blank">Ordis Nightwarden</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>244.44 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Nightwarden"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_10432" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_36/UNIQUE/JPG/en_US/201fab31e274ccd0d0db056dbad403ae.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_10432" class="link" target="_blank">Ordis Nightwarden</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>10.53 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Nightwarden"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_23122" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_36/UNIQUE/JPG/en_US/5a982d45b75ec7d373113051dd92bb8a.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_23122" class="link" target="_blank">Ordis Nightwarden</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>5 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Nightwarden"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_29910" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_36/UNIQUE/JPG/en_US/055c59abc31c2889970e24718d99bf14.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_29910" class="link" target="_blank">Ordis Nightwarden</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>50 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Nightwarden"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_32755" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_36/UNIQUE/JPG/en_US/4d6015a62203ab44c06c84b852b36f1f.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_32755" class="link" target="_blank">Ordis Nightwarden</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>12.5 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Nightwarden"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_7775" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_36/UNIQUE/JPG/en_US/cf95cec39c35665cfdfbd0264822de6d.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_7775" class="link" target="_blank">Ordis Nightwarden</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>30 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Accountant"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_BISE_B_OR_50_U_3482" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/BISE/CARDS/ALT_BISE_B_OR_50/UNIQUE/JPG/en_US/9e7691a0ade1298bfb72233bccfe03c9.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_BISE_B_OR_50_U_3482" class="link" target="_blank">Ordis Accountant</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>4.21 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Staff Clerk"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_BISE_B_OR_51_U_3880" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/BISE/CARDS/ALT_BISE_B_OR_51/UNIQUE/JPG/en_US/7cb6a76f3da3c050103613537d59aaa1.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_BISE_B_OR_51_U_3880" class="link" target="_blank">Staff Clerk</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>55 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="The Frog Prince"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_CORE_B_OR_09_U_6748" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CORE/CARDS/ALT_CORE_B_OR_09/UNIQUE/JPG/en_US/1699709177f189cd9cfaaaaa9d22c095.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_CORE_B_OR_09_U_6748" class="link" target="_blank">The Frog Prince</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>5 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Monolith Archivist"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_CORE_B_OR_10_U_1175" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CORE/CARDS/ALT_CORE_B_OR_10/UNIQUE/JPG/en_US/93daf88ebbd5a7d5ac7d0fc3c432d5cf.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_CORE_B_OR_10_U_1175" class="link" target="_blank">Monolith Archivist</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>100 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="The Frog Prince"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_COREKS_B_OR_09_U_3268" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/COREKS/CARDS/ALT_CORE_B_OR_09/UNIQUE/JPG/en_US/9ee6b56368af4e7d076bce72d6bbf37a.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_COREKS_B_OR_09_U_3268" class="link" target="_blank">The Frog Prince</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>20 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Monolith Archivist"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_COREKS_B_OR_10_U_3302" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/COREKS/CARDS/ALT_CORE_B_OR_10/UNIQUE/JPG/en_US/c34e701987fdfbd34951ce5c44371970.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_COREKS_B_OR_10_U_3302" class="link" target="_blank">Monolith Archivist</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>20 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Monolith Archivist"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_COREKS_B_OR_10_U_3688" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/COREKS/CARDS/ALT_CORE_B_OR_10/UNIQUE/JPG/en_US/e4bb84c8f24ef59d39f7afdc719f9d11.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_COREKS_B_OR_10_U_3688" class="link" target="_blank">Monolith Archivist</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>7 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Monolith Archivist"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_COREKS_B_OR_10_U_3958" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/COREKS/CARDS/ALT_CORE_B_OR_10/UNIQUE/JPG/en_US/272305a27dcd4aa4b51f9c23af366989.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_COREKS_B_OR_10_U_3958" class="link" target="_blank">Monolith Archivist</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>45 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Overseer"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_11028" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_34/UNIQUE/JPG/en_US/bccd6c993b465c927d51a2545541753d.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_11028" class="link" target="_blank">Ordis Overseer</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>30 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Overseer"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_11213" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_34/UNIQUE/JPG/en_US/073d3a7962a606e5984b455dc7a2ea04.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_11213" class="link" target="_blank">Ordis Overseer</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>63.02 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Overseer"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_6105" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_34/UNIQUE/JPG/en_US/a8c24e09f4f22a2d759978923a2f764c.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_6105" class="link" target="_blank">Ordis Overseer</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>75 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Overseer"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_6236" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_34/UNIQUE/JPG/en_US/ecd5942d7a7bc3c605ac0141f1cd1418.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_6236" class="link" target="_blank">Ordis Overseer</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>15 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Overseer"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_6727" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_34/UNIQUE/JPG/en_US/fd4272c0bbd91ffbef8ce69b3dd74c8e.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_6727" class="link" target="_blank">Ordis Overseer</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>11 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Overseer"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_7697" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_34/UNIQUE/JPG/en_US/2669060bcd6be16258ab3c3f9653b7da.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_7697" class="link" target="_blank">Ordis Overseer</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>75 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Nightwarden"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_11250" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_36/UNIQUE/JPG/en_US/17a7d67f4649e7b903bbbf7ae7d0c2ff.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_11250" class="link" target="_blank">Ordis Nightwarden</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>75 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Nightwarden"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_11395" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_36/UNIQUE/JPG/en_US/1b99e09e900bcfcbeb99545238ad92ba.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_11395" class="link" target="_blank">Ordis Nightwarden</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>80 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Nightwarden"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_18821" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_36/UNIQUE/JPG/en_US/0eaea6ca27f0f396d9171d64fe0255e4.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_18821" class="link" target="_blank">Ordis Nightwarden</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>3 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Nightwarden"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_19227" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_36/UNIQUE/JPG/en_US/2c4da2ac0c57d6f32b496fc66b7130c6.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_19227" class="link" target="_blank">Ordis Nightwarden</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>18 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Nightwarden"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_19513" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_36/UNIQUE/JPG/en_US/1ae2617f63f2bd2023cc104cca5ccb1d.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_19513" class="link" target="_blank">Ordis Nightwarden</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>30 USD</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Nightwarden"  data-first_seen_date_filter="2025-8-3 14:02">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_19631" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_36/UNIQUE/JPG/en_US/b82abcc4ce48f8d205de6ce13467150f.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_36_U_19631" class="link" target="_blank">Ordis Nightwarden</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-8-3 14:02</td></tr>
+<tr><td>40 USD</td></tr>
+</table>
+
+        </div>
+    </div>
+    
+    <script>
+        function filterItems() {
+            let searchTextUserValue = document.getElementById("searchBox").value.trim().toLowerCase();
+            let factionUserValue = document.getElementById("factionFilter").value;
+            let rarityUserValue = document.getElementById("rarityFilter").value;
+let first_seen_date_filterUserValue = document.getElementById("first_seen_date_filter").value;
+
+            let items = document.querySelectorAll(".styled-table");
+
+            items.forEach(item => {
+                let itemFaction = item.getAttribute("data-faction");
+                let itemRarity = item.getAttribute("data-rarity");
+                let itemText = item.getAttribute("data-name");
+let item_first_seen_date_filter = item.getAttribute("data-first_seen_date_filter");
+let matches_first_seen_date_filter = first_seen_date_filterUserValue  === "" || item_first_seen_date_filter == first_seen_date_filterUserValue;
+                let matchesSearch = itemText.toLowerCase().includes(searchTextUserValue);
+                let matchesFaction = factionUserValue === "" || itemFaction === factionUserValue;
+                let matchesRarity = rarityUserValue === "" || itemRarity === rarityUserValue;
+    
+                item.style.display = matchesSearch && matchesFaction && matchesRarity && matches_first_seen_date_filter && 1 ? "" : "none";
+            });
+        }
+    </script>
+
+</body>
+</html>
+
