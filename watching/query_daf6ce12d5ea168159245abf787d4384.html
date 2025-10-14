@@ -10163,43 +10163,4 @@
 <tr><td>N/A</td></tr>
 </table>
 
-<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Snoozer Shroom"  data-last_update_filter="2025-8-3 20:42">
-    <tr>
-        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_MU_32_U_3808" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_MU_32/UNIQUE/JPG/en_US/a07d543e8b9a8cfc086f9077cded48fe.jpg" class="responsive-image"></a></td>
-    </tr>
-    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_MU_32_U_3808" class="link" target="_blank">Snoozer Shroom</a></td></tr>
-    <tr><td>Ordis</td></tr>
-<tr><td>2025-8-3 20:42</td></tr>
-<tr><td>N/A</td></tr>
-</table>
-
-        </div>
-    </div>
-    
-    <script>
-        function filterItems() {
-            let searchTextUserValue = document.getElementById("searchBox").value.trim().toLowerCase();
-            let factionUserValue = document.getElementById("factionFilter").value;
-            let rarityUserValue = document.getElementById("rarityFilter").value;
-let last_update_filterUserValue = document.getElementById("last_update_filter").value;
-
-            let items = document.querySelectorAll(".styled-table");
-
-            items.forEach(item => {
-                let itemFaction = item.getAttribute("data-faction");
-                let itemRarity = item.getAttribute("data-rarity");
-                let itemText = item.getAttribute("data-name");
-let item_last_update_filter = item.getAttribute("data-last_update_filter");
-let matches_last_update_filter = last_update_filterUserValue  === "" || item_last_update_filter == last_update_filterUserValue;
-                let matchesSearch = itemText.toLowerCase().includes(searchTextUserValue);
-                let matchesFaction = factionUserValue === "" || itemFaction === factionUserValue;
-                let matchesRarity = rarityUserValue === "" || itemRarity === rarityUserValue;
-    
-                item.style.display = matchesSearch && matchesFaction && matchesRarity && matches_last_update_filter && 1 ? "" : "none";
-            });
-        }
-    </script>
-
-</body>
-</html>
-
+<table class="styled-table" data-faction="Ordis" data-rarity="U
