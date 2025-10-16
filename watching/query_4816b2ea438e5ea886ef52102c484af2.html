@@ -147,6 +147,7 @@
 <option value="2025-10-16 10:21">2025-10-16 10:21</option>
 <option value="2025-10-16 10:51">2025-10-16 10:51</option>
 <option value="2025-10-16 11:51">2025-10-16 11:51</option>
+<option value="2025-10-16 16:51">2025-10-16 16:51</option>
 <option value="2025-10-16 4:21">2025-10-16 4:21</option>
 <option value="2025-10-16 5:51">2025-10-16 5:51</option>
 </select>
@@ -164,6 +165,16 @@
     <div class="wrapper">
         <div class="container">
 
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Designer Drone"  data-description_search="MAIN_COST: 1; RECALL_COST: 3; MOUNTAIN_POWER: 0; OCEAN_POWER: 0; FOREST_POWER: 1; MAIN_EFFECT: {H} []Create an [Ordis Recruit 1/1/1] Soldier token in my Expedition.  {R} You may put a card from your hand in Reserve. If you do: You may discard target Permanent.; ECHO_EFFECT: {I} When another Character joins your Expeditions — []I gain 1 boost, up to a max of 2." data-set_filter="Whispers from the Maze" data-last_update_filter="2025-10-16 16:51">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_BISE_B_AX_51_U_4193" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/BISE/CARDS/ALT_BISE_B_AX_51/UNIQUE/JPG/en_US/f2a2807603370d72a81c0e985205884e.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_BISE_B_AX_51_U_4193" class="link" target="_blank">Designer Drone</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-10-16 16:51</td></tr>
+<tr><td>N/A</td></tr>
+</table>
 
 <table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Trooper"  data-description_search="MAIN_COST: 1; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 1; FOREST_POWER: 0; MAIN_EFFECT: {J} Unless you have eight or more Mana Orbs: Pay {1} less for the next card you play this Afternoon." data-set_filter="Beyond the Gates - KS Edition" data-last_update_filter="2025-10-16 11:51">
     <tr>
@@ -10152,4 +10163,49 @@
 <tr><td>N/A</td></tr>
 </table>
 
-<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Overseer"  data-description_search="MAIN_COST: 2; RECALL_COST: 3; MOUNTAIN_POWER: 0; OCEAN_POWER: 0; FOREST_POWER: 2; MAIN_EFFECT: {H} []Create one [Ordis Recruit 1/1/1] Soldier token in my Expedition per Bureaucrat you control.  When another non-token Character joins your Expeditions — If there are two or more cards in your Landmarks: Target Character other than me gains 1 boost." data-set_filter="Trial by Frost" data-last_update_filter="2025-10-11 11:2
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Ordis Overseer"  data-description_search="MAIN_COST: 2; RECALL_COST: 3; MOUNTAIN_POWER: 0; OCEAN_POWER: 0; FOREST_POWER: 2; MAIN_EFFECT: {H} []Create one [Ordis Recruit 1/1/1] Soldier token in my Expedition per Bureaucrat you control.  When another non-token Character joins your Expeditions — If there are two or more cards in your Landmarks: Target Character other than me gains 1 boost." data-set_filter="Trial by Frost" data-last_update_filter="2025-10-11 11:29">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_18206" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_OR_34/UNIQUE/JPG/en_US/033af740908b09dcd1969875fda22260.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_OR_34_U_18206" class="link" target="_blank">Ordis Overseer</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2025-10-11 11:29</td></tr>
+<tr><td>N/A</td></tr>
+</table>
+
+        </div>
+    </div>
+    
+    <script>
+        function filterItems() {
+            let searchTextUserValue = document.getElementById("searchBox").value.trim().toLowerCase();
+            let factionUserValue = document.getElementById("factionFilter").value;
+            let rarityUserValue = document.getElementById("rarityFilter").value;
+let last_update_filterUserValue = document.getElementById("last_update_filter").value;
+let set_filterUserValue = document.getElementById("set_filter").value;
+let description_searchUserValue = document.getElementById("description_search").value.trim().toLowerCase();
+
+            let items = document.querySelectorAll(".styled-table");
+
+            items.forEach(item => {
+                let itemFaction = item.getAttribute("data-faction");
+                let itemRarity = item.getAttribute("data-rarity");
+                let itemText = item.getAttribute("data-name");
+let item_last_update_filter = item.getAttribute("data-last_update_filter");
+let matches_last_update_filter = last_update_filterUserValue  === "" || item_last_update_filter == last_update_filterUserValue;
+let item_set_filter = item.getAttribute("data-set_filter");
+let matches_set_filter = set_filterUserValue  === "" || item_set_filter == set_filterUserValue;
+let item_description_search = item.getAttribute("data-description_search");
+let matches_description_search = item_description_search.toLowerCase().includes(description_searchUserValue);
+                let matchesSearch = itemText.toLowerCase().includes(searchTextUserValue);
+                let matchesFaction = factionUserValue === "" || itemFaction === factionUserValue;
+                let matchesRarity = rarityUserValue === "" || itemRarity === rarityUserValue;
+    
+                item.style.display = matchesSearch && matchesFaction && matchesRarity && matches_description_search && matches_set_filter && matches_last_update_filter && 1 ? "" : "none";
+            });
+        }
+    </script>
+
+</body>
+</html>
+
