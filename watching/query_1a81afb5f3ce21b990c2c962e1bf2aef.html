@@ -2848,17 +2848,4 @@ let first_seen_date_filterUserValue = document.getElementById("first_seen_date_f
                 let itemFaction = item.getAttribute("data-faction");
                 let itemRarity = item.getAttribute("data-rarity");
                 let itemText = item.getAttribute("data-name");
-let item_first_seen_date_filter = item.getAttribute("data-first_seen_date_filter");
-let matches_first_seen_date_filter = first_seen_date_filterUserValue  === "" || item_first_seen_date_filter == first_seen_date_filterUserValue;
-                let matchesSearch = itemText.toLowerCase().includes(searchTextUserValue);
-                let matchesFaction = factionUserValue === "" || itemFaction === factionUserValue;
-                let matchesRarity = rarityUserValue === "" || itemRarity === rarityUserValue;
-    
-                item.style.display = matchesSearch && matchesFaction && matchesRarity && matches_first_seen_date_filter && 1 ? "" : "none";
-            });
-        }
-    </script>
-
-</body>
-</html>
-
+let item_first_seen_date_filter = item.getAttribute(
