@@ -112,6 +112,16 @@
         .market-watcher-ignore-card-form button:active {
             background-color: #c0e0ff;
         }
+        
+        .market-watcher-ignore-card-form button.disabled,
+        .market-watcher-ignore-card-form button:disabled {
+            background-color: #f0f4f8;
+            color: #999;
+            border: 1px solid #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+            opacity: 0.7;
+        }
 
 
     </style>
@@ -17303,6 +17313,8 @@ let matches_description_search = item_description_search.toLowerCase().includes(
                 event.preventDefault();
                 const formData = new FormData(form);
                 const payload = Object.fromEntries(formData.entries());
+                
+                form.querySelector("button").disabled = true;
 
                 fetch(form.action, {
                   method: "POST",
