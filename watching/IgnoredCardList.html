@@ -1,1 +1,271 @@
 ﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altered TCG Cards collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            justify-content: center;
+        }
+
+
+        .styled-table {
+            width: 100%;    
+            max-width: 250px; /* Adjust as needed */
+            border-collapse: collapse;
+            text-align: center;
+            background-color: #e6f7ff; /* Soothing light blue */
+            border: 1px solid #b3e0ff;
+        }
+
+        .styled-table td {
+            padding: 10px;
+            border-bottom: 1px solid #b3e0ff;
+        }
+
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .link {
+            color: #0077cc; /* Soft blue to match the theme */
+            text-decoration: none; /* Removes default underline */
+            font-weight: bold; /* Slight emphasis */
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        .link:hover, .link:focus {
+            color: #005fa3; /* Slightly darker on hover */
+            text-decoration: underline; /* Adds subtle emphasis */
+        }
+
+        .filter-bar {
+            position: fixed;
+            width: 80%;
+            max-width: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f0f8ff;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+
+        .filter-bar input[type="text"] {
+            flex: 1 1 200px; /* Grows and shrinks as needed */
+            min-width: 100px;
+        }
+
+        .filter-bar select {
+            flex: 1 1 150px; /* Grows and shrinks as needed */
+            min-width: 100px;
+        }
+
+        .wrapper {
+            width: 80%;
+            margin: auto;
+            padding-top: 60px; /* Creates space below the fixed filter */
+            overflow-y: auto; /* Enables scrolling */
+        }
+
+        .market-watcher-ignore-card-form button {
+            background-color: #e0f0ff;       /* light blue */
+            color: #005a9c;                  /* deeper blue for text */
+            border: 1px solid #b0d4f1;       /* subtle border */
+            padding: 8px 16px;
+            font-size: 14px;
+            font-family: sans-serif;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+        }
+
+        .market-watcher-ignore-card-form button:hover {
+            background-color: #d0e8ff;
+            box-shadow: 0 0 4px rgba(0, 90, 156, 0.3);
+        }
+
+        .market-watcher-ignore-card-form button:active {
+            background-color: #c0e0ff;
+        }
+        
+        .market-watcher-ignore-card-form button.disabled,
+        .market-watcher-ignore-card-form button:disabled {
+            background-color: #f0f4f8;
+            color: #999;
+            border: 1px solid #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+            opacity: 0.7;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="filter-bar">
+        <input type="text" id="searchBox" placeholder="Search Name..." onkeyup="filterItems()">
+        <select id="factionFilter" onchange="filterItems()">
+            <option value="">All Factions</option>
+<option value="Axiom">Axiom</option>
+<option value="Bravos">Bravos</option>
+<option value="Lyra">Lyra</option>
+<option value="Muna">Muna</option>
+<option value="Ordis">Ordis</option>
+<option value="Yzmir">Yzmir</option>
+<option value="Neutral">Neutral</option>
+
+        </select>
+        <select id="rarityFilter" onchange="filterItems()">
+            <option value="">All Rarities</option>
+            <option value="Common">Common</option>
+            <option value="Rare">Rare</option>
+            <option value="Unique">Unique</option>
+        </select>
+<select id="set_filter" onchange="filterItems()">
+<option value="">All Set</option>
+<option value="Beyond the Gates">Beyond the Gates</option>
+<option value="Beyond the Gates - KS Edition">Beyond the Gates - KS Edition</option>
+<option value="Trial by Frost">Trial by Frost</option>
+<option value="Whispers from the Maze">Whispers from the Maze</option>
+</select>
+<select id="ignoredqueries_filter" onchange="filterItems()">
+<option value="">All IgnoredQueries</option>
+<option value=""></option>
+<option value="Axiom uniques with card count">Axiom uniques with card count</option>
+<option value="Sierra uniques with draw">Sierra uniques with draw</option>
+</select>
+<input type="text" id="description_search" placeholder="Search Description..." onkeyup="filterItems()">
+
+    </div>
+    <div class="wrapper">
+        <div class="container">
+
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Tinker Bell"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 0; FOREST_POWER: 3; MAIN_EFFECT: {J} If there are two or more cards in your Landmarks: [Sabotage].  When I leave the Expedition zone — []You may return a card other than me from your Reserve to your hand." data-ignoredqueries_filter="Axiom uniques with card count" data-set_filter="Beyond the Gates">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_CORE_B_AX_09_U_7304" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CORE/CARDS/ALT_CORE_B_AX_09/UNIQUE/JPG/en_US/89bbe3c2dd01dcb6862ed72a2fd13227.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_CORE_B_AX_09_U_7304" class="link" target="_blank">Tinker Bell</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>Axiom uniques with card count</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Three Little Pigs"  data-description_search="MAIN_COST: 4; RECALL_COST: 3; MOUNTAIN_POWER: 4; OCEAN_POWER: 3; FOREST_POWER: 4; MAIN_EFFECT: {J} If there are two or more cards in your Landmarks: Each Robot you control other than me gains 1 boost.; ECHO_EFFECT: {D} : []Pay {1} less for the next card you play this Afternoon." data-ignoredqueries_filter="Axiom uniques with card count" data-set_filter="Beyond the Gates - KS Edition">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_COREKS_B_AX_12_U_1681" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/COREKS/CARDS/ALT_CORE_B_AX_12/UNIQUE/JPG/en_US/aa53ca7a9ed8404f8f799e5cf4c2835f.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_COREKS_B_AX_12_U_1681" class="link" target="_blank">Three Little Pigs</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>Axiom uniques with card count</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="BLISS Keytarist"  data-description_search="MAIN_COST: 2; RECALL_COST: 3; MOUNTAIN_POWER: 0; OCEAN_POWER: 3; FOREST_POWER: 0; MAIN_EFFECT: {R} []Pay {1} less for the next card you play this Afternoon.  At Dusk — If I have 1 or more boosts: Reveal the top card of your deck. If it's a Robot or Permanent, draw it, otherwise discard it.; ECHO_EFFECT: {I} At Noon — []Choose one:  • I gain 1 boost, up to a max of 3.  • {T} : I gain 2 boosts, up to a max of 3." data-ignoredqueries_filter="Sierra uniques with draw" data-set_filter="Whispers from the Maze">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_BISE_B_LY_52_U_2536" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/BISE/CARDS/ALT_BISE_B_LY_52/UNIQUE/JPG/en_US/2b92188ac24c930e6beecbfd2db9c74e.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_BISE_B_LY_52_U_2536" class="link" target="_blank">BLISS Keytarist</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>Sierra uniques with draw</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Moth Larva"  data-description_search="MAIN_COST: 2; RECALL_COST: 1; MOUNTAIN_POWER: 0; OCEAN_POWER: 1; FOREST_POWER: 2; MAIN_EFFECT: {H} You may pay {1}. If you do: Draw a card.  {R} If there are two or more exhausted cards in Reserve: Pay {1} less for the next Permanent you play this Afternoon.  {R} You may pay {1}. If you do: Target Character other than me gains 1 boost." data-ignoredqueries_filter="Sierra uniques with draw" data-set_filter="Trial by Frost">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_ALIZE_B_YZ_32_U_6883" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/ALIZE/CARDS/ALT_ALIZE_B_YZ_32/UNIQUE/JPG/en_US/e39d779778e37c10b07f25233c60c850.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_ALIZE_B_YZ_32_U_6883" class="link" target="_blank">Moth Larva</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>Sierra uniques with draw</td></tr>
+</table>
+
+<table class="styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Monolith Archivist"  data-description_search="MAIN_COST: 2; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 3; FOREST_POWER: 2; MAIN_EFFECT: [][]I am [Defender].  [][]The {j}, {h} and {r} abilities of Characters facing me can't activate." data-ignoredqueries_filter="" data-set_filter="Beyond the Gates">
+    <tr>
+        <td><a href="https://qr.altered.gg/ALT_CORE_B_OR_10_U_5050" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CORE/CARDS/ALT_CORE_B_OR_10/UNIQUE/JPG/en_US/264ed1c4465769e58ff0a5734ee21f6a.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://qr.altered.gg/ALT_CORE_B_OR_10_U_5050" class="link" target="_blank">Monolith Archivist</a></td></tr>
+    <tr><td>Ordis</td></tr>
+</table>
+
+        </div>
+    </div>
+    
+    <script>
+        function filterItems() {
+            let searchTextUserValue = document.getElementById("searchBox").value.trim().toLowerCase();
+            let factionUserValue = document.getElementById("factionFilter").value;
+            let rarityUserValue = document.getElementById("rarityFilter").value;
+let set_filterUserValue = document.getElementById("set_filter").value;
+let ignoredqueries_filterUserValue = document.getElementById("ignoredqueries_filter").value;
+let description_searchUserValue = document.getElementById("description_search").value.trim().toLowerCase();
+
+            let items = document.querySelectorAll(".styled-table");
+
+            items.forEach(item => {
+                let itemFaction = item.getAttribute("data-faction");
+                let itemRarity = item.getAttribute("data-rarity");
+                let itemText = item.getAttribute("data-name");
+let item_set_filter = item.getAttribute("data-set_filter");
+let matches_set_filter = set_filterUserValue  === "" || item_set_filter == set_filterUserValue;
+let item_ignoredqueries_filter = item.getAttribute("data-ignoredqueries_filter");
+let matches_ignoredqueries_filter = ignoredqueries_filterUserValue  === "" || item_ignoredqueries_filter == ignoredqueries_filterUserValue;
+let item_description_search = item.getAttribute("data-description_search");
+let matches_description_search = item_description_search.toLowerCase().includes(description_searchUserValue);
+                let matchesSearch = itemText.toLowerCase().includes(searchTextUserValue);
+                let matchesFaction = factionUserValue === "" || itemFaction === factionUserValue;
+                let matchesRarity = rarityUserValue === "" || itemRarity === rarityUserValue;
+    
+                item.style.display = matchesSearch && matchesFaction && matchesRarity && matches_description_search && matches_ignoredqueries_filter && matches_set_filter && 1 ? "" : "none";
+            });
+        }
+
+        // Section specifc for the ignore card on the market watcher 
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".market-watcher-ignore-card-form").forEach(form => {
+              form.addEventListener("submit", event => {
+                event.preventDefault();
+                const formData = new FormData(form);
+                const payload = Object.fromEntries(formData.entries());
+                
+                form.querySelector("button").disabled = true;
+
+                fetch(form.action, {
+                  method: "POST",
+                  body: formData
+                }).then(res => 
+                    {{
+                        if(!res.ok) alert("Failed to submit: " + res.status);
+                        else alert("Successfully added to ignore list - beware results are cached.");
+                    }});
+              });
+            });
+          });
+
+    </script>
+
+</body>
+</html>
+
