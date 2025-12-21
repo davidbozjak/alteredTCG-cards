@@ -1,0 +1,2177 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altered TCG Cards collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            justify-content: center;
+        }
+
+
+        .styled-table {
+            width: 100%;    
+            max-width: 250px; /* Adjust as needed */
+            border-collapse: collapse;
+            text-align: center;
+            background-color: #e6f7ff; /* Soothing light blue */
+            border: 1px solid #b3e0ff;
+        }
+
+        .styled-table td {
+            padding: 10px;
+            border-bottom: 1px solid #b3e0ff;
+        }
+
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .link {
+            color: #0077cc; /* Soft blue to match the theme */
+            text-decoration: none; /* Removes default underline */
+            font-weight: bold; /* Slight emphasis */
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        .link:hover, .link:focus {
+            color: #005fa3; /* Slightly darker on hover */
+            text-decoration: underline; /* Adds subtle emphasis */
+        }
+
+        .filter-bar {
+            position: fixed;
+            width: 80%;
+            max-width: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f0f8ff;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+
+        .filter-bar input[type="text"] {
+            flex: 1 1 200px; /* Grows and shrinks as needed */
+            min-width: 100px;
+        }
+
+        .filter-bar select {
+            flex: 1 1 150px; /* Grows and shrinks as needed */
+            min-width: 100px;
+        }
+
+        .wrapper {
+            width: 80%;
+            margin: auto;
+            padding-top: 60px; /* Creates space below the fixed filter */
+            overflow-y: auto; /* Enables scrolling */
+        }
+
+        .market-watcher-ignore-card-form button {
+            background-color: #e0f0ff;       /* light blue */
+            color: #005a9c;                  /* deeper blue for text */
+            border: 1px solid #b0d4f1;       /* subtle border */
+            padding: 8px 16px;
+            font-size: 14px;
+            font-family: sans-serif;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+        }
+
+        .market-watcher-ignore-card-form button:hover {
+            background-color: #d0e8ff;
+            box-shadow: 0 0 4px rgba(0, 90, 156, 0.3);
+        }
+
+        .market-watcher-ignore-card-form button:active {
+            background-color: #c0e0ff;
+        }
+        
+        .market-watcher-ignore-card-form button.disabled,
+        .market-watcher-ignore-card-form button:disabled {
+            background-color: #f0f4f8;
+            color: #999;
+            border: 1px solid #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+            opacity: 0.7;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="filter-bar">
+        <input type="text" id="searchBox" placeholder="Search Name..." onkeyup="filterItems()">
+        <select id="factionFilter" onchange="filterItems()">
+            <option value="">All Factions</option>
+<option value="Axiom">Axiom</option>
+<option value="Bravos">Bravos</option>
+<option value="Lyra">Lyra</option>
+<option value="Muna">Muna</option>
+<option value="Ordis">Ordis</option>
+<option value="Yzmir">Yzmir</option>
+<option value="Neutral">Neutral</option>
+
+        </select>
+        <select id="rarityFilter" onchange="filterItems()">
+            <option value="">All Rarities</option>
+            <option value="Common">Common</option>
+            <option value="Rare">Rare</option>
+            <option value="Unique">Unique</option>
+        </select>
+<select id="last_update_filter" onchange="filterItems()">
+<option value="">All Last Update</option>
+<option value="2025-12-21 12:40">2025-12-21 12:40</option>
+</select>
+<select id="set_filter" onchange="filterItems()">
+<option value="">All Set</option>
+<option value="Skybound Odyssey">Skybound Odyssey</option>
+</select>
+<input type="text" id="description_search" placeholder="Search Description..." onkeyup="filterItems()">
+
+    </div>
+    <div class="wrapper">
+        <div class="container">
+
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 2; FOREST_POWER: 3; MAIN_EFFECT: When I leave the Expedition zone — You may sacrifice a Permanent. If you do: Create an [Aerolith] token in your Landmarks, otherwise create one in each player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6043/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/41c2274651d39c59bb962a6a14ddb4fc.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6043/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>3.5 USD</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_6043">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 2; FOREST_POWER: 1; MAIN_EFFECT: {H} If you have two or more cards in Reserve: [Sabotage].  {R} If you control a token: I gain 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4237/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/094fd0bce0efb3977bc1b21c242e8561.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4237/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>10 USD</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4237">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 2; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 1; MAIN_EFFECT: {J} []Target Character in Reserve gains 1 boost.  {R} If you control a token: You may target a Character other than me, it gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4905/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/249af60ee6b042fcf4f0970486489888.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4905/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>10 USD</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4905">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {H} [][Resupply].  {R} If there's a Character in each of your Expeditions: Target Character in play or in Reserve gains 2 boosts.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5052/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/6fd723a744a168b6286fe81190c104cb.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5052/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>10 USD</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5052">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {H} If you control a [[Fleeting]] Character: [Resupply].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_8222/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/fa3e7370c273a253f46d5555ea054357.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_8222/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>10 USD</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_8222">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {R} You may sacrifice another Robot or Permanent. If you do: Pay {2} less for the next Permanent you play this Afternoon.  When I leave the Expedition zone — If there are two or more cards in your Landmarks: Create an [Aerolith] token in your Landmarks, otherwise create one in each player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4807/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/729d038494d0a7ccc3d0c58b93679f2a.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4807/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>15 USD</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4807">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 1; MAIN_EFFECT: {J} If there's a Character in each of your Expeditions: Target Character in Reserve gains 1 boost.  When I go to Reserve from the Expedition zone — []Create an [Aerolith] token in your Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4279/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/65bdc90bd565a595ff4abbc4dde4f5e6.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4279/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>15.32 USD</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4279">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {H} If you have two or more cards in Reserve: Target Character in play or in Reserve gains 1 boost.  When I leave the Expedition zone, if I was [[Fleeting]] — []Target Permanent you control activates its {j} abilities.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6398/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/4c1b88da88d1296f6fca204e72658818.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6398/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>30 USD</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_6398">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 1; FOREST_POWER: 3; MAIN_EFFECT: When you create one or more tokens — If you have two or more cards in Reserve: I gain 2 boosts.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1134/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/2aded945bd1eca86ccc3184032adb6d6.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1134/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>50 USD</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1134">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 2; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: When I leave the Expedition zone — You may sacrifice a Permanent. If you do: Create an [Aerolith] token in your Landmarks, otherwise create one in each player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1621/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/cfe576c713554da43c4d24c830007eed.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1621/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>50 USD</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1621">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 1; FOREST_POWER: 3; MAIN_EFFECT: {J} If there are two or more cards in your Landmarks: You may target a Character other than me, it gains 1 boost.  {H} If you control a [[Fleeting]] Character: [Resupply], otherwise each player [Resupplies].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5999/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/c4ea70fd72dfe10a792af38b81ab32b2.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5999/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5999">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 2; FOREST_POWER: 1; MAIN_EFFECT: {H} If you have two or more cards in Reserve: You may exhaust target card in Reserve.  When you create one or more tokens — If there are two or more cards in your Landmarks: Target Character gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6007/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/fc3878895bad40a5af20877ef3c83955.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6007/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_6007">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {J} []Create an [Aerolith] token in target player's Landmarks.  When I go to Reserve from the Expedition zone — If you have six or more Mana Orbs: Create a [Brassbug 2/2/2] Robot token in your Hero Expedition.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4200/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/cadf65ef236d8d9107448adda5a93f33.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4200/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4200">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 3; MAIN_EFFECT: {H} []You may target a Character, it switches Expeditions.  {R} If you have six or more Mana Orbs: Target Character in play or in Reserve gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5051/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/86f2d2bd24ead90ecfce94d018e46c9c.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5051/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5051">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 3; MAIN_EFFECT: {H} You may sacrifice another Robot or Permanent. If you do: [Resupply].  At Dusk — []You may target a Character, it gains [[Fleeting]].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1179/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/4d09140583183815985bef27db90c4e8.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1179/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1179">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 2; FOREST_POWER: 3; MAIN_EFFECT: {J} If an opponent's hand contains more cards than yours: Target Character in Reserve gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2412/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/a2520d3df72d69e637094a071da333f2.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2412/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2412">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {H} If there's a Character in each of your Expeditions: You may exhaust target card in Reserve.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6529/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/42a0a53e4b47a9b5d1129c5a35ceaaf6.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6529/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_6529">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 1; MAIN_EFFECT: When I go to Reserve from the Expedition zone — []Create an [Aerolith] token in target player's Landmarks.  When you create one or more tokens — If there are two or more cards in your Landmarks: I gain 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4979/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/679dcb5e57f9a32d4c221f67f1a8c62d.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4979/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4979">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 1; FOREST_POWER: 3; MAIN_EFFECT: {J} If you have six or more Mana Orbs: Create a [Brassbug 2/2/2] Robot token in your other Expedition (the one I'm not in).; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1072/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/9db4ea7c5a8efebc3edafff7e6fcdb57.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1072/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1072">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {J} If an opponent's hand contains more cards than yours: You may exhaust target card in Reserve.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4827/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/f21b683c8aa7be5874a9e7a4fa681d59.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4827/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4827">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 1; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {J} []Create an [Aerolith] token in each player's Landmarks.  {J} If you control a [[Fleeting]] Character: [Sabotage].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1348/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/f07ef5c12ac4b173ca28d211687a612c.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1348/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1348">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 1; FOREST_POWER: 3; MAIN_EFFECT: {H} You may sacrifice another Robot or Permanent. If you do: [Resupply], otherwise each player [Resupplies].  At Dusk — []Create an [Aerolith] token in target player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1165/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/e43eef6e8d461a1892fa89d3daa36444.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1165/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1165">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {J} []You may target a Character, it gains [[Fleeting]].  {J} You may discard a card from your Reserve. If you do: [Resupply].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5784/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/757b988fc1b2848dab9877ed347c9928.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5784/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5784">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 2; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {J} You may sacrifice a Permanent. If you do: [Resupply], otherwise each player [Resupplies].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2473/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/467305f4b290b1f21f94f370f2d3b1a0.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2473/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2473">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 1; OCEAN_POWER: 3; FOREST_POWER: 1; MAIN_EFFECT: {J} If there's a Character in each of your Expeditions: [Resupply].  {J} If an opponent's hand contains more cards than yours: Create an [Aerolith] token in your Landmarks, otherwise create one in each player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_10021/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/c3fa982202ed3aacfa57f51723eb3bc3.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_10021/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_10021">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {J} If you control a [[Fleeting]] Character: Create an [Aerolith] token in your Landmarks.  When I go to Reserve from the Expedition zone — []Create an [Aerolith] token in each player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6585/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/9bea8d413d8c27a0709a9faec49d7f2b.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6585/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_6585">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 1; FOREST_POWER: 3; MAIN_EFFECT: {H} If there's a Character in each of your Expeditions: You may target a Character other than me, it gains 1 boost.  When you create one or more tokens — []Target Character in Reserve gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5725/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/655f55501cca0437378727e9e7a0d431.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5725/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5725">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: When you create one or more tokens — []I gain 1 boost.  When I leave the Expedition zone — If there are two or more cards in your Landmarks: Create an [Aerolith] token in target player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2687/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/bafc19980900f959c8543ae099492d21.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2687/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2687">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 3; FOREST_POWER: 2; MAIN_EFFECT: {J} You may discard a card from your Reserve. If you do: You may exhaust target card in Reserve.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1136/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/6e141ba478e8cf09ccc72d1ad266b478.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1136/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1136">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 2; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {H} If an opponent's hand contains more cards than yours: You may target a Character other than me, it gains 1 boost.  {R} If you have six or more Mana Orbs: [Sabotage], otherwise you may exhaust target card in Reserve.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6587/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/e347776328cb35f523860aa3a5521c17.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6587/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_6587">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 1; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {J} If an opponent's hand contains more cards than yours: [Resupply], otherwise each player [Resupplies].  {R} You may sacrifice a Permanent. If you do: Pay {2} less for the next Permanent you play this Afternoon.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_9512/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/406dbdc6515c1f98efdc992d7ec169c9.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_9512/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_9512">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 2; MAIN_EFFECT: {H} If an opponent's hand contains more cards than yours: Target Character gains 1 boost.  At Dusk — []Create an [Aerolith] token in each player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5901/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/2ddae79ec4659c94c30004cdd61ba657.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5901/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5901">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 1; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {R} You may sacrifice another Robot or Permanent. If you do: Pay {2} less for the next Permanent you play this Afternoon.  When you create one or more tokens — If there's a Character in each of your Expeditions: I gain 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4803/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/de8c49b08967fb4f02cd98ff29cb6dbb.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4803/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4803">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {J} []I gain 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_10232/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/30b5a973433fab20e4e1b187fabd01dd.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_10232/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_10232">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 2; MAIN_EFFECT: When you create one or more tokens — If an opponent's hand contains more cards than yours: Target Character gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_971/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/31e090f3f6bc74d9f723366e2971fee6.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_971/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_971">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {R} If you have six or more Mana Orbs: I gain 2 boosts, otherwise I gain 1 boost.  When you sacrifice a Permanent — []You may target a Character other than me, it gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2600/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/4d875ade159633c28c715003f9036442.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2600/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2600">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 1; FOREST_POWER: 2; MAIN_EFFECT: {J} If you control a [[Fleeting]] Character: Target Character in Reserve gains 1 boost.  {H} []Create an [Aerolith] token in target player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5709/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/5337b6d76e6d5330eb2890b235805874.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5709/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5709">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 1; MAIN_EFFECT: {J} []Target Character in play or in Reserve gains 1 boost.  When I go to Reserve from the Expedition zone — You may sacrifice a Permanent. If you do: Create a [Brassbug 2/2/2] Robot token in your Companion Expedition.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4579/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/930f4dc92e0ce235397c918d49d43857.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4579/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4579">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: When I go to Reserve from the Expedition zone — If you have six or more Mana Orbs: Create an [Aerolith] token in target player's Landmarks.  When you create one or more tokens — If you have two or more cards in Reserve: I gain 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1132/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/875ec6936a9bb95c689ebbae0ad9b881.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1132/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1132">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {J} You may sacrifice another Robot or Permanent. If you do: I gain 2 boosts.  When I go to Reserve from the Expedition zone — If there are two or more cards in your Landmarks: Create an [Aerolith] token in target player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5019/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/c80648a55424410a3caf3913b54f1ec0.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5019/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5019">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 1; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {R} If you control a token: [Resupply].  When a Character joins the Expedition facing me — []Target Character in play or in Reserve gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4249/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/453733e50894dccffb6a280d602e10df.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4249/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4249">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 3; FOREST_POWER: 1; MAIN_EFFECT: {J} If you have six or more Mana Orbs: I gain 2 boosts, otherwise I gain 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_939/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/a8e037c3433a9248332376dfc9dd2fa2.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_939/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_939">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 1; FOREST_POWER: 2; MAIN_EFFECT: {J} If an opponent's hand contains more cards than yours: You may target a Character other than me, it gains 1 boost.  When you sacrifice a Permanent — []I gain 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_8286/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/56af129d9e3940207fbb8f5a9e2e7a79.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_8286/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_8286">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 2; RECALL_COST: 3; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 1; MAIN_EFFECT: {J} []Target Character gains 1 boost.  {R} If there's a Character in each of your Expeditions: Create a [Brassbug 2/2/2] Robot token in your other Expedition (the one I'm not in).; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_9315/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/72dbdfd141e089dc1d753caef8a7592d.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_9315/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_9315">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 3; MAIN_EFFECT: {H} []Create an [Aerolith] token in target player's Landmarks.  When you create one or more tokens — If you control two or more Permanents: You may target a Character other than me, it gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1720/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/f09256b8a06eb5353f1861ffcfec6af0.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1720/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1720">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 3; MAIN_EFFECT: When I go to Reserve from the Expedition zone — []Target Character in Reserve gains 1 boost.  At Dusk — If you have six or more Mana Orbs: Create an [Aerolith] token in your Landmarks, otherwise create one in each player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1309/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/92dd995bd5bb482c047153b6de1c04ba.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1309/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1309">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 2; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {H} If you control two or more Permanents: You may target a Character other than me, it gains 1 boost.  {R} []You may target a Character other than me, it gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1195/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/2d094457f23cdbde1385104a6a86c84d.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1195/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1195">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {J} If there are two or more cards in your Landmarks: [Resupply].  When you create one or more tokens — []You may target a Character other than me, it gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2464/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/e429ab9dccd92d45ddd1438caffbdd6b.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2464/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2464">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 2; MAIN_EFFECT: When I go to Reserve from the Expedition zone — If you have six or more Mana Orbs: Create an [Aerolith] token in target player's Landmarks.  At Dusk — If there are two or more cards in your Landmarks: Create an [Aerolith] token in your Landmarks, otherwise create one in each player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5918/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/52dc051b4809295412e72e607cfa3579.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5918/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5918">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 1; MAIN_EFFECT: {J} []Create a [Brassbug 2/2/2] Robot token in your Hero Expedition.  {R} []Target Character in play or in Reserve gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5965/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/1d4cd947c545405efdafe606b4ebf9eb.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5965/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5965">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 1; FOREST_POWER: 1; MAIN_EFFECT: {J} If there's a Character in each of your Expeditions: [Resupply], otherwise each player [Resupplies].  {H} []I gain 1 boost per card in your Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5654/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/a503abf2c0e69cb5479f9aad4288b2d3.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5654/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5654">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {J} You may discard a card from your Reserve. If you do: [Resupply], otherwise each player [Resupplies].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4673/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/61b1459b339001da886ec9ca36ff0bbe.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4673/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4673">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 1; OCEAN_POWER: 1; FOREST_POWER: 3; MAIN_EFFECT: {H} []Pay {2} less for the next Permanent you play this Afternoon.  {R} If you control a token: Create a [Brassbug 2/2/2] Robot token in target Expedition.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4571/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/ad5611c5a2125eb06a6a06625065f3e7.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4571/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4571">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 1; FOREST_POWER: 1; MAIN_EFFECT: {J} If you have six or more Mana Orbs: [Sabotage].  When you play another card from Reserve — []You may target a Character other than me, it gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_10164/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/ecfaf92ea3a0dd28904a28fb83c3a33c.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_10164/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_10164">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 1; FOREST_POWER: 3; MAIN_EFFECT: {H} []Target Character gains 1 boost.  When you create one or more tokens — If there are two or more cards in your Landmarks: You may target a Character other than me, it gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2520/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/388a195c97a7965169e6f464c5c5b8f2.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2520/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2520">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {H} If you have two or more cards in Reserve: You may exhaust target card in Reserve.  When a Character joins the Expedition facing me — []Target Character gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_9292/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/382d667892053af8193e560a3b565484.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_9292/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_9292">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 1; FOREST_POWER: 1; MAIN_EFFECT: {R} If there's a Character in each of your Expeditions: Target Character in play or in Reserve gains 1 boost.  When I leave the Expedition zone — []Create a [Brassbug 2/2/2] Robot token in your Hero Expedition.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1629/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/ad3e18d64cfbab5fdf65c3acec3f00a8.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1629/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1629">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {H} You may sacrifice a Permanent. If you do: [Sabotage], otherwise you may exhaust target card in Reserve.  At Dusk — []Create an [Aerolith] token in target player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6028/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/16213c62b06e04f81c4f4d8d8eaf08c4.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6028/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_6028">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 3; FOREST_POWER: 1; MAIN_EFFECT: {R} If there are two or more cards in your Landmarks: You may exhaust target card in Reserve.  When you sacrifice a Permanent — []Target Character in Reserve gains 2 boosts.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2635/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/b10ac0d2e13cda60892453274a73380a.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2635/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2635">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 1; MAIN_EFFECT: {J} If you have two or more cards in Reserve: Create a [Brassbug 2/2/2] Robot token in my Expedition.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1514/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/e89a74ca3d93ca612ef4fb36f2175d26.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1514/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1514">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 2; MAIN_EFFECT: When you create one or more tokens — If you have two or more cards in Reserve: Target Character gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2624/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/d2c3fd94affd0bbded4cf6b4721c9d75.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2624/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2624">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 2; MAIN_EFFECT: When a Character joins the Expedition facing me — []I gain 1 boost.  When I leave the Expedition zone — If an opponent's hand contains more cards than yours: Create an [Aerolith] token in your Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5686/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/1e737ebdd645cd5a6bc316ef4dc41f52.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5686/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5686">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 1; MAIN_EFFECT: When a Character joins the Expedition facing me — []I gain 1 boost.  At Dusk — If an opponent's hand contains more cards than yours: Create an [Aerolith] token in your Landmarks, otherwise create one in each player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_10090/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/653dde1ee91ade6aec48fa7457da5432.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_10090/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_10090">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 1; FOREST_POWER: 3; MAIN_EFFECT: {J} If an opponent's hand contains more cards than yours: Create an [Aerolith] token in target player's Landmarks.  {H} []You may target a Character, it gains [[Fleeting]].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4678/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/99c6b32b16565ddb44e683ebe8f99993.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4678/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4678">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {R} If an opponent's hand contains more cards than yours: You may exhaust target card in Reserve.  When you sacrifice a Permanent — []Target Character in play or in Reserve gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1442/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/51dc01954447bbcd611d19be3a286d2f.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1442/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1442">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 3; FOREST_POWER: 2; MAIN_EFFECT: {J} []I gain 1 boost.  At Dusk — []Create an [Aerolith] token in each player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5847/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/028a625000ce67390633bcf1b4d8d2d5.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5847/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5847">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 3; FOREST_POWER: 1; MAIN_EFFECT: When you create one or more tokens — []Target Character in Reserve gains 1 boost.  When I go to Reserve from the Expedition zone — []Target Character in Reserve gains 2 boosts.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2544/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/b3bf6e972029134680deb9918a0d2a13.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2544/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2544">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 3; FOREST_POWER: 1; MAIN_EFFECT: {J} []You may target a Character other than me, it gains 1 boost.  When you create one or more tokens — If I'm not [[Fleeting]]: Target Character gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6563/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/781a33dfcd9a41551b882753e1f06b38.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6563/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_6563">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 1; FOREST_POWER: 3; MAIN_EFFECT: {J} You may sacrifice another Robot or Permanent. If you do: [Sabotage].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_7104/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/658df4725c06efc051cd937626f327ab.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_7104/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_7104">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 1; FOREST_POWER: 2; MAIN_EFFECT: {H} You may sacrifice a Permanent. If you do: Pay {2} less for the next Permanent you play this Afternoon.  At Dusk — []Create an [Aerolith] token in your Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1776/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/e75956315214a2011bd0da8ec226be10.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1776/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1776">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 2; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 1; FOREST_POWER: 2; MAIN_EFFECT: {R} If there's a Character in each of your Expeditions: [Resupply], otherwise each player [Resupplies].  When I go to Reserve from the Expedition zone — If there are two or more cards in your Landmarks: Create an [Aerolith] token in target player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4534/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/e3a98678178595a43664abf971fd7934.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4534/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4534">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 3; MAIN_EFFECT: {J} []You may exhaust target card in Reserve.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5807/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/511b26cff85be9d2792c8794ce68c106.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5807/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5807">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 1; FOREST_POWER: 2; MAIN_EFFECT: {H} []Create a [Brassbug 2/2/2] Robot token in target Expedition.  {R} If you have six or more Mana Orbs: I gain 2 boosts, otherwise I gain 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1205/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/50570d83fb21e2a00a3e9b2e45e6f8f3.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1205/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1205">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 1; MAIN_EFFECT: {H} If you control two or more Permanents: Target Character in Reserve gains 1 boost.  When a Character joins the Expedition facing me — []Target Character gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4383/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/9d6a41f87558835ddaabe4d35f098d67.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4383/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4383">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 2; MAIN_EFFECT: {H} If you control two or more Permanents: Create an [Aerolith] token in your Landmarks, otherwise [Resupply].  {R} If you control two or more Permanents: [Sabotage].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6037/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/25af7b2073c431c61338cdc2eaecf806.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6037/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_6037">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 1; FOREST_POWER: 1; MAIN_EFFECT: {J} If you control a [[Fleeting]] Character: Target Character gains 1 boost.  {H} If there are two or more cards in your Landmarks: [Resupply].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1144/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/6e230694de588c57cdf839428da1943a.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1144/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1144">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 1; FOREST_POWER: 1; MAIN_EFFECT: {H} If you control two or more Permanents: Target Character in Reserve gains 1 boost.  When a Character joins the Expedition facing me — []Target Character gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_10049/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/5dd229ba3370211265f033f39f97c94d.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_10049/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_10049">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 3; FOREST_POWER: 1; MAIN_EFFECT: {H} []Create an [Aerolith] token in your Landmarks.  {R} []Create a [Brassbug 2/2/2] Robot token in your other Expedition (the one I'm not in).; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1473/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/4cfedc15c42dd971a1cfb1d5869a4424.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1473/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1473">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 1; FOREST_POWER: 2; MAIN_EFFECT: {H} []Pay {2} less for the next Permanent you play this Afternoon.  {R} If an opponent's hand contains more cards than yours: Create an [Aerolith] token in target player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6364/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/cfb10164471ae60363b57ad151f84936.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6364/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_6364">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {R} If you have six or more Mana Orbs: [Resupply], otherwise each player [Resupplies].  When you play another card from Reserve — []Target Character gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6559/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/46bd7c962d14394d4585ecdb8643aa6e.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6559/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_6559">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 2; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 1; MAIN_EFFECT: {J} You may sacrifice another Robot or Permanent. If you do: Create an [Aerolith] token in your Landmarks, otherwise create one in each player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6015/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/e4cb1d24764e35db3749cf8e82febc37.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_6015/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_6015">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {R} If there are two or more cards in your Landmarks: Target Character in play or in Reserve gains 1 boost.  When a Character joins the Expedition facing me — []Up to two target Characters in play or in Reserve each gain 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2741/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/e1cd5e69c46bc62e6f0974f2b17e64d5.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2741/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2741">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {R} You may sacrifice a Permanent. If you do: Target Character in play or in Reserve gains 2 boosts.  When you create one or more tokens — []I gain 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4308/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/534c5f8ba9bd501d5737b2fca19af1d1.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4308/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4308">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 3; FOREST_POWER: 1; MAIN_EFFECT: {J} If there are two or more cards in your Landmarks: Create an [Aerolith] token in your Landmarks.  When a Character joins the Expedition facing me — []I gain 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5025/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/76e466f13bc9a1bcf643a746c28f3ea1.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5025/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5025">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 1; FOREST_POWER: 2; MAIN_EFFECT: {J} If an opponent's hand contains more cards than yours: [Sabotage].  When you sacrifice a Permanent — []Target Character in play or in Reserve gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_10139/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/ad23a2a2cda6caa7d3d5cda6b095343c.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_10139/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_10139">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {J} If you have six or more Mana Orbs: [Resupply].  At Dusk — If I'm [[Fleeting]]: Create an [Aerolith] token in target player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2540/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/459051f7f0320bf11ed9f9ad100c16aa.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2540/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2540">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {J} [][Exhausted Resupply].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5926/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/b1deba8c938682f9c620333f65096824.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5926/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5926">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 1; FOREST_POWER: 2; MAIN_EFFECT: {J} []Target Character in play or in Reserve gains 1 boost.  {H} You may sacrifice another Robot or Permanent. If you do: Create an [Aerolith] token in your Landmarks, otherwise [Resupply].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2446/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/a436aef69e2a594513efe57bca42ec2d.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2446/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2446">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 2; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 1; MAIN_EFFECT: {J} If you control two or more Permanents: [Resupply].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5922/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/4559e89449dd1bf8b04db352e3f337ee.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5922/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5922">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 1; FOREST_POWER: 3; MAIN_EFFECT: {J} You may sacrifice a Permanent. If you do: Create an [Aerolith] token in your Landmarks, otherwise create one in each player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4378/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/eeeff41b7dc9c6ed67d8b2ad7c79e643.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4378/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4378">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {J} If you control a token: [Resupply].  When I go to Reserve from the Expedition zone — []Target Permanent you control activates its {j} abilities.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2364/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/e292169c19380a1af44054b581da45f0.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2364/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2364">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 2; MAIN_EFFECT: {J} If there are two or more cards in your Landmarks: Create a [Brassbug 2/2/2] Robot token in your Hero Expedition.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5614/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/9447164abd69591c55613e81eb45db9e.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5614/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5614">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {J} []You may target a Character other than me, it gains 1 boost.  {R} You may sacrifice another Robot or Permanent. If you do: [Sabotage].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4690/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/e2a751aca0483450ac1740adddbe4e88.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4690/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4690">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {J} If you have six or more Mana Orbs: [Sabotage], otherwise you may exhaust target card in Reserve.  When you create one or more tokens — []Target Character in Reserve gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1598/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/bc2c70ffe2175c803e673b2696a0e47a.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1598/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1598">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 2; MAIN_EFFECT: [][]Each Character you control other than me is [Tough 1].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_10286/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/f4f10391f45a27843f5974caec14aaff.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_10286/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_10286">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 2; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 1; FOREST_POWER: 2; MAIN_EFFECT: {J} If an opponent's hand contains more cards than yours: [Resupply], otherwise each player [Resupplies].; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5631/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/b8af3fa95690558752a099bf9251f436.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5631/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5631">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 2; FOREST_POWER: 1; MAIN_EFFECT: {R} If there's a Character in each of your Expeditions: I gain 2 boosts, otherwise I gain 1 boost.  When I leave the Expedition zone — []Target Character in Reserve gains 2 boosts.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4369/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/493d5595faab3b91d73dff726b7f1b23.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4369/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4369">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 1; FOREST_POWER: 1; MAIN_EFFECT: {R} If you control two or more Permanents: Target Character in Reserve gains 2 boosts.  At Dusk — []Draw a card.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1670/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/29a5c0d6e005d5e6d80306916759d800.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1670/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1670">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: When I go to Reserve from the Expedition zone — []Target Character in Reserve gains 1 boost.  When I leave the Expedition zone — []Create an [Aerolith] token in each player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2701/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/9b0fde45ccdc49acdcaac50833c6902c.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2701/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2701">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 1; FOREST_POWER: 1; MAIN_EFFECT: {J} You may discard a card from your Reserve. If you do: Draw a card, otherwise [Resupply].  {H} If you have six or more Mana Orbs: You may exhaust target card in Reserve.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5986/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/cc2d3529631f14f1321cab0fe7747ca9.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_5986/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_5986">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 1; FOREST_POWER: 2; MAIN_EFFECT: {J} You may discard a card from your Reserve. If you do: Create an [Aerolith] token in your Landmarks, otherwise [Resupply].  {J} If there's a Character in each of your Expeditions: Target Character in Reserve gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4316/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/17acd156bb6e5823edc19f7fd233cd91.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4316/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4316">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: When I leave the Expedition zone — If you have six or more Mana Orbs: [Sabotage].  When I leave the Expedition zone, if I was [[Fleeting]] — []Create a [Brassbug 2/2/2] Robot token in target Expedition.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2579/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/1394ce93b67f7f7aa4a3ce24d1fad7a3.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2579/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2579">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 2; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: {R} If there are two or more cards in your Landmarks: Draw a card.  When a Character joins the Expedition facing me — []Target Character gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2572/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/e159ca95cf529eb7c07896bf8c7adbac.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2572/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2572">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 2; FOREST_POWER: 3; MAIN_EFFECT: When you create one or more tokens — If I'm [[Fleeting]]: You may target a Character other than me, it gains 1 boost.  When I leave the Expedition zone — You may sacrifice a Permanent. If you do: Draw a card.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4815/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/8b9de3b7b81d572be051386859bed166.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4815/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4815">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {H} You may sacrifice a Permanent. If you do: Create an [Aerolith] token in target player's Landmarks.  When I leave the Expedition zone — If an opponent's hand contains more cards than yours: Draw a card.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2610/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/956209b7c6f65743b93dbd5eb190eca3.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2610/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2610">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 3; FOREST_POWER: 3; MAIN_EFFECT: When I go to Reserve from the Expedition zone — If you have six or more Mana Orbs: Draw a card.  When I leave the Expedition zone, if I was [[Fleeting]] — []Create an [Aerolith] token in your Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2628/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/ec7a3684e7e01a9da63c28a8d9d22f01.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2628/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2628">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {J} If there's a Character in each of your Expeditions: Draw a card.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2597/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/1b9128ab7ea5425a962157f6cffaf8ff.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2597/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2597">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {J} []Target Permanent you control activates its {j} abilities.  {J} If you control two or more Permanents: Create an [Aerolith] token in your Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2388/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/08a1a2ad9bc744fb5a8315b2e8018251.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_2388/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_2388">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {J} If you have two or more cards in Reserve: Draw a card.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1535/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/6a428f9c55ba7cca76f01b2f89768c12.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1535/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1535">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 2; FOREST_POWER: 2; MAIN_EFFECT: {J} If there's a Character in each of your Expeditions: Target Character in play or in Reserve gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1235/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/ee4c0a91e93d070b7ab127b231c42dd4.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1235/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1235">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 3; FOREST_POWER: 1; MAIN_EFFECT: {J} If you have two or more cards in Reserve: [Sabotage].  {R} You may sacrifice a Permanent. If you do: [Sabotage], otherwise you may exhaust target card in Reserve.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4305/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/ea9511ff3042984bd393724cf858335c.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_4305/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_4305">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 2; OCEAN_POWER: 1; FOREST_POWER: 1; MAIN_EFFECT: {J} []Create a [Brassbug 2/2/2] Robot token in your Hero Expedition.  At Dusk — If I'm [[Fleeting]]: Create an [Aerolith] token in target player's Landmarks.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1059/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/978553f4c7fae030b498c12697cd01e8.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1059/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1059">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 1; FOREST_POWER: 3; MAIN_EFFECT: {J} If an opponent's hand contains more cards than yours: [Sabotage].  {R} If you control a token: Target Character in play or in Reserve gains 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1555/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/b04cdaf5f1b9b64797b2095d867f3a58.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_1555/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_1555">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 2; OCEAN_POWER: 2; FOREST_POWER: 3; MAIN_EFFECT: {J} You may sacrifice a Permanent. If you do: Create a [Brassbug 2/2/2] Robot token in my Expedition.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in your Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_9550/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/988d39fe300d8e2c781190a912cc63ab.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_9550/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_9550">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+<table class="styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Paju, Axiom Pilot"  data-description_search="MAIN_COST: 3; RECALL_COST: 2; MOUNTAIN_POWER: 3; OCEAN_POWER: 2; FOREST_POWER: 3; MAIN_EFFECT: {J} If there are two or more cards in your Landmarks: I gain 1 boost.; ECHO_EFFECT: {D} : []Create an [Aerolith] token in target player's Landmarks." data-set_filter="Skybound Odyssey" data-last_update_filter="2025-12-21 12:40">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_9307/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_AX_70/UNIQUE/JPG/en_US/668534b07c1380eeb16d8687e17e5c35.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_AX_70_U_9307/offers" class="link" target="_blank">Paju, Axiom Pilot</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2025-12-21 12:40</td></tr>
+<tr><td>N/A</td></tr>
+<tr><td>
+<form class="market-watcher-ignore-card-form"
+  action="https://sheetdb.io/api/v1/6zmwbey7x6fpk">
+    <input type="hidden" name="query_id" value="217a817024ee6002b1f798d42344831f">
+    <input type="hidden" name="card_reference" value="ALT_CYCLONE_B_AX_70_U_9307">
+    <button type="submit">Ignore</button>
+</form></td></tr>
+</table>
+
+        </div>
+    </div>
+    
+    <script>
+        function filterItems() {
+            let searchTextUserValue = document.getElementById("searchBox").value.trim().toLowerCase();
+            let factionUserValue = document.getElementById("factionFilter").value;
+            let rarityUserValue = document.getElementById("rarityFilter").value;
+let last_update_filterUserValue = document.getElementById("last_update_filter").value;
+let set_filterUserValue = document.getElementById("set_filter").value;
+let description_searchUserValue = document.getElementById("description_search").value.trim().toLowerCase();
+
+            let items = document.querySelectorAll(".styled-table");
+
+            items.forEach(item => {
+                let itemFaction = item.getAttribute("data-faction");
+                let itemRarity = item.getAttribute("data-rarity");
+                let itemText = item.getAttribute("data-name");
+let item_last_update_filter = item.getAttribute("data-last_update_filter");
+let matches_last_update_filter = last_update_filterUserValue  === "" || item_last_update_filter == last_update_filterUserValue;
+let item_set_filter = item.getAttribute("data-set_filter");
+let matches_set_filter = set_filterUserValue  === "" || item_set_filter == set_filterUserValue;
+let item_description_search = item.getAttribute("data-description_search");
+let matches_description_search = item_description_search.toLowerCase().includes(description_searchUserValue);
+                let matchesSearch = itemText.toLowerCase().includes(searchTextUserValue);
+                let matchesFaction = factionUserValue === "" || itemFaction === factionUserValue;
+                let matchesRarity = rarityUserValue === "" || itemRarity === rarityUserValue;
+    
+                item.style.display = matchesSearch && matchesFaction && matchesRarity && matches_description_search && matches_set_filter && matches_last_update_filter && 1 ? "" : "none";
+            });
+        }
+
+        // Section specifc for the ignore card on the market watcher 
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".market-watcher-ignore-card-form").forEach(form => {
+              form.addEventListener("submit", event => {
+                event.preventDefault();
+                const formData = new FormData(form);
+                const payload = Object.fromEntries(formData.entries());
+                
+                form.querySelector("button").disabled = true;
+
+                fetch(form.action, {
+                  method: "POST",
+                  body: formData
+                }).then(res => 
+                    {{
+                        if(!res.ok) alert("Failed to submit: " + res.status);
+                        else alert("Successfully added to ignore list - beware results are cached.");
+                    }});
+              });
+            });
+          });
+
+    </script>
+
+</body>
+</html>
+
