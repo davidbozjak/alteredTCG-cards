@@ -1,0 +1,285 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altered TCG Cards collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .styled-table,
+        .card-styled-table {
+            width: 100%;    
+            max-width: 250px; /* Adjust as needed */
+            border-collapse: collapse;
+            text-align: center;
+            background-color: #e6f7ff; /* Soothing light blue */
+            border: 1px solid #b3e0ff;
+        }
+
+        .styled-table td {
+            padding: 10px;
+            border-bottom: 1px solid #b3e0ff;
+        }
+
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .link {
+            color: #0077cc; /* Soft blue to match the theme */
+            text-decoration: none; /* Removes default underline */
+            font-weight: bold; /* Slight emphasis */
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        .link:hover, .link:focus {
+            color: #005fa3; /* Slightly darker on hover */
+            text-decoration: underline; /* Adds subtle emphasis */
+        }
+
+        .filter-bar {
+            position: fixed;
+            width: 80%;
+            max-width: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f0f8ff;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+
+        .filter-bar input[type="text"] {
+            flex: 1 1 200px; /* Grows and shrinks as needed */
+            min-width: 100px;
+        }
+
+        .filter-bar select {
+            flex: 1 1 150px; /* Grows and shrinks as needed */
+            min-width: 100px;
+        }
+
+        .filter-bar .stat-item {
+          flex: 1 1 150px; /* Matches your select styling */
+          min-width: 100px;
+          padding: 6px 10px;
+          background-color: #e6f2ff;
+          border-radius: 4px;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+
+        .wrapper {
+            width: 80%;
+            margin: auto;
+            padding-top: 60px; /* Creates space below the fixed filter */
+            overflow-y: auto; /* Enables scrolling */
+        }
+
+        .market-watcher-sheetDB-card-form button {
+            background-color: #e0f0ff;       /* light blue */
+            color: #005a9c;                  /* deeper blue for text */
+            border: 1px solid #b0d4f1;       /* subtle border */
+            padding: 8px 16px;
+            font-size: 14px;
+            font-family: sans-serif;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+        }
+
+        .market-watcher-sheetDB-card-form button:hover {
+            background-color: #d0e8ff;
+            box-shadow: 0 0 4px rgba(0, 90, 156, 0.3);
+        }
+
+        .market-watcher-sheetDB-card-form button:active {
+            background-color: #c0e0ff;
+        }
+        
+        .market-watcher-sheetDB-card-form button.disabled,
+        .market-watcher-sheetDB-card-form button:disabled {
+            background-color: #f0f4f8;
+            color: #999;
+            border: 1px solid #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+            opacity: 0.7;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="filter-bar">
+        <input type="text" id="searchBox" placeholder="Search Name..." onkeyup="filterItems()">
+        <select id="factionFilter" onchange="filterItems()">
+            <option value="">All Factions</option>
+<option value="Axiom">Axiom</option>
+<option value="Bravos">Bravos</option>
+<option value="Lyra">Lyra</option>
+<option value="Muna">Muna</option>
+<option value="Ordis">Ordis</option>
+<option value="Yzmir">Yzmir</option>
+<option value="Neutral">Neutral</option>
+
+        </select>
+        <select id="rarityFilter" onchange="filterItems()">
+            <option value="">All Rarities</option>
+            <option value="Common">Common</option>
+            <option value="Rare">Rare</option>
+            <option value="Unique">Unique</option>
+        </select>
+<select id="last_update_filter" onchange="filterItems()">
+<option value="">All Last Update</option>
+<option value="2026-1-31 9:47">2026-1-31 9:47</option>
+</select>
+<select id="set_filter" onchange="filterItems()">
+<option value="">All Set</option>
+<option value="Beyond the Gates">Beyond the Gates</option>
+<option value="Skybound Odyssey">Skybound Odyssey</option>
+</select>
+<input type="text" id="description_search" placeholder="Search Description..." onkeyup="filterItems()">
+
+        <!-- Stats box -->
+        
+        <div class="stat-item">Total: <strong id="label-total-cards-count">0</strong></div>
+        <div class="stat-item">Unique: <strong id="label-total-unique-cards-count">0</strong></div>
+        <div class="stat-item">Rare: <strong id="label-total-rare-cards-count">0</strong></div>
+        <div class="stat-item">Common: <strong id="label-total-common-cards-count">0</strong></div>
+
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+
+
+<table class="card-styled-table" data-faction="Ordis" data-rarity="Unique" data-name="Bluecap"  data-description_search="MAIN_COST: 2; RECALL_COST: 2; MOUNTAIN_POWER: 1; OCEAN_POWER: 2; FOREST_POWER: 1; MAIN_EFFECT: {J} If an opponent's Reserve contains more cards than yours: Create an [Ordis Recruit 1/1/1] Soldier token in your Companion Expedition.  When my Expedition fails to move forward during Dusk — []Create an [Aerolith] token in your Landmarks.; ECHO_EFFECT: {D} : []Create an [Ordis Recruit 1/1/1] Soldier token in your Hero Expedition." data-set_filter="Skybound Odyssey" data-last_update_filter="2026-1-31 9:47">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_OR_69_U_1050/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CYCLONE/CARDS/ALT_CYCLONE_B_OR_69/UNIQUE/JPG/en_US/71a6b1d59da052188fd701e929b61f50.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CYCLONE_B_OR_69_U_1050/offers" class="link" target="_blank">Bluecap</a></td></tr>
+    <tr><td>Ordis</td></tr>
+<tr><td>2026-1-31 9:47</td></tr>
+<tr><td>5 USD</td></tr>
+</table>
+
+<table class="card-styled-table" data-faction="Axiom" data-rarity="Unique" data-name="Tinker Bell"  data-description_search="MAIN_COST: 3; RECALL_COST: 3; MOUNTAIN_POWER: 3; OCEAN_POWER: 0; FOREST_POWER: 3; MAIN_EFFECT: {J} If there are two or more cards in your Landmarks: [Sabotage].  When I leave the Expedition zone — []You may return a card other than me from your Reserve to your hand." data-set_filter="Beyond the Gates" data-last_update_filter="2026-1-31 9:47">
+    <tr>
+        <td><a href="https://www.altered.gg/en-us/cards/ALT_CORE_B_AX_09_U_7304/offers" class="link" target="_blank"><img src="https://altered-prod-eu.s3.amazonaws.com/Art/CORE/CARDS/ALT_CORE_B_AX_09/UNIQUE/JPG/en_US/89bbe3c2dd01dcb6862ed72a2fd13227.jpg" class="responsive-image"></a></td>
+    </tr>
+    <tr><td><a href="https://www.altered.gg/en-us/cards/ALT_CORE_B_AX_09_U_7304/offers" class="link" target="_blank">Tinker Bell</a></td></tr>
+    <tr><td>Axiom</td></tr>
+<tr><td>2026-1-31 9:47</td></tr>
+<tr><td>N/A</td></tr>
+</table>
+
+        </div>
+    </div>
+    
+    <script>
+        function filterItems() {
+            let searchTextUserValue = document.getElementById("searchBox").value.trim().toLowerCase();
+            let factionUserValue = document.getElementById("factionFilter").value;
+            let rarityUserValue = document.getElementById("rarityFilter").value;
+let last_update_filterUserValue = document.getElementById("last_update_filter").value;
+let set_filterUserValue = document.getElementById("set_filter").value;
+let description_searchUserValue = document.getElementById("description_search").value.trim().toLowerCase();
+
+            let items = document.querySelectorAll(".card-styled-table");
+
+            let noVisibleItems = 0, noUniqes = 0, noRares = 0, noCommons = 0;
+
+            items.forEach(item => {
+                let itemFaction = item.getAttribute("data-faction");
+                let itemRarity = item.getAttribute("data-rarity");
+                let itemText = item.getAttribute("data-name");
+let item_last_update_filter = item.getAttribute("data-last_update_filter");
+let matches_last_update_filter = last_update_filterUserValue  === "" || item_last_update_filter == last_update_filterUserValue;
+let item_set_filter = item.getAttribute("data-set_filter");
+let matches_set_filter = set_filterUserValue  === "" || item_set_filter == set_filterUserValue;
+let item_description_search = item.getAttribute("data-description_search");
+let matches_description_search = item_description_search.toLowerCase().includes(description_searchUserValue);
+                let matchesSearch = itemText.toLowerCase().includes(searchTextUserValue);
+                let matchesFaction = factionUserValue === "" || itemFaction === factionUserValue;
+                let matchesRarity = rarityUserValue === "" || itemRarity === rarityUserValue;
+    
+                let isVisible = matchesSearch && matchesFaction && matchesRarity && matches_description_search && matches_set_filter && matches_last_update_filter && 1;
+
+                item.style.display = isVisible ? "" : "none";
+
+                if (isVisible) {
+                    noVisibleItems++;
+
+                    if (itemRarity == "Common") noCommons++;
+                    else if (itemRarity == "Rare") noRares++;
+                    else if (itemRarity == "Unique") noUniqes++;
+                }
+            });
+        
+            document.getElementById('label-total-cards-count').textContent = noVisibleItems;
+            document.getElementById('label-total-unique-cards-count').textContent = noUniqes;
+            document.getElementById('label-total-rare-cards-count').textContent = noRares;
+            document.getElementById('label-total-common-cards-count').textContent = noCommons;
+        
+        }
+
+        // Section specifc for the ignore card on the market watcher 
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".market-watcher-sheetDB-card-form").forEach(form => {
+              form.addEventListener("submit", event => {
+                event.preventDefault();
+                const formData = new FormData(form);
+                const payload = Object.fromEntries(formData.entries());
+                
+                form.querySelector("button").disabled = true;
+
+                fetch(form.action, {
+                  method: "POST",
+                  body: formData
+                }).then(res => 
+                    {{
+                        if(!res.ok) alert("Failed to submit: " + res.status);
+                        else alert("Successfully added to ignore list - beware results are cached.");
+                    }});
+              });
+            });
+          });
+
+        // Run the filter once so that the stats get filled in
+        filterItems();
+
+    </script>
+
+</body>
+</html>
+
