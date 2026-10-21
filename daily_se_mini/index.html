@@ -16,7 +16,7 @@
 
     #grid {
         display: grid;
-        grid-template-columns: repeat(9, 40px);
+        grid-template-columns: repeat(15, 40px);
         gap: 4px;
         justify-content: center;
     }
@@ -77,7 +77,7 @@
 
     @media (max-width: 480px) {
         #grid {
-            grid-template-columns: repeat(10, 32px);
+            grid-template-columns: repeat(1, 32px);
         }
         .cell {
             width: 32px;
@@ -107,29 +107,12 @@
 // Crossword Data Structure
 // ------------------------------
 const crossword = {
-	cols: 9, 
-	rows: 10, 
+	cols: 15, 
+	rows: 1, 
 solution: [ 
-		[null, null, null, null, null, "4", "9", null, null, ],
-		[null, null, null, null, null, "g", "s", null, null, ],
-		[null, null, "5", "p", "a", "r", "k", null, null, ],
-		[null, null, null, "2", null, "a", "ö", null, null, ],
-		[null, null, "7", "s", "i", "n", "n", "e", null, ],
-		[null, "8", "3", "t", "o", "n", null, null, null, ],
-		[null, "s", null, "o", null, null, null, null, null, ],
-		[null, "n", "6", "r", "ö", "k", null, null, null, ],
-		["1", "ö", "d", "e", null, null, null, null, null, ],
-		[null, null, null, null, null, null, null, null, null, ],
+		["1", "m", "y", "n", "d", "i", "g", "h", "e", "t", "e", "r", "n", "a", null, ],
 	],
-clues: [{ number: 1, clue: "utan människor" }, 
-{ number: 2, clue: "Karl den ____" }, 
-{ number: 3, clue: "Tusen kilo" }, 
-{ number: 4, clue: "lite ____" }, 
-{ number: 5, clue: "Grön plats i stan" }, 
-{ number: 6, clue: "Kommer från eld" }, 
-{ number: 7, clue: "Syn eller hörsel" }, 
-{ number: 8, clue: "Vit på vintern" }, 
-{ number: 9, clue: "bekväm" }, 
+clues: [{ number: 1, clue: "T.ex. Skatteverket" }, 
 ]
 };
 
