@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Simple Crossword</title>
+<title>Daily SE Mini Thursday, 2026-10-22</title>
 
 <style>
     body {
@@ -16,7 +16,7 @@
 
     #grid {
         display: grid;
-        grid-template-columns: repeat(13, 40px);
+        grid-template-columns: repeat(10, 40px);
         gap: 4px;
         justify-content: center;
     }
@@ -77,7 +77,7 @@
 
     @media (max-width: 480px) {
         #grid {
-            grid-template-columns: repeat(1, 32px);
+            grid-template-columns: repeat(10, 32px);
         }
         .cell {
             width: 32px;
@@ -91,7 +91,7 @@
 </head>
 <body>
 
-<h2>Simple Crossword</h2>
+<h2>Daily SE Mini Thursday, 2026-10-22</h2>
 
 <div id="grid"></div>
 
@@ -107,12 +107,31 @@
 // Crossword Data Structure
 // ------------------------------
 const crossword = {
-	cols: 13, 
-	rows: 1, 
+	cols: 10, 
+	rows: 10, 
 solution: [ 
-		["1", "m", "o", "t", "s", "t", "å", "n", "d", "a", "r", "e", null, ],
+		[null, null, null, null, null, null, null, "10", "9", null, ],
+		[null, null, null, null, null, "4", null, "t", "u", null, ],
+		[null, null, "3", "7", "i", "d", null, "o", "m", null, ],
+		[null, "2", "s", "8", "l", "i", "n", "n", "e", null, ],
+		[null, "t", "u", "5", "t", "a", "k", null, "å", null, ],
+		[null, "y", "d", null, null, "m", null, null, null, null, ],
+		["1", "s", "o", "m", "m", "a", "r", null, null, null, ],
+		[null, "k", "k", "6", "o", "n", "d", null, null, null, ],
+		[null, null, "u", "11", "y", "t", "a", "n", null, null, ],
+		[null, null, null, null, null, null, null, null, null, null, ],
 	],
-clues: [{ number: 1, clue: "Den man spelar mot" }, 
+clues: [{ number: 1, clue: "Varmaste årstiden" }, 
+{ number: 2, clue: "Från Tyskland" }, 
+{ number: 3, clue: "Hapanskt sifferpussel" }, 
+{ number: 4, clue: "Mycket hård ädelsten" }, 
+{ number: 5, clue: "Överst på huset" }, 
+{ number: 6, clue: "Motsats till god" }, 
+{ number: 7, clue: "Kort med ditt namn" }, 
+{ number: 8, clue: "Svensk naturforskare Carl von" }, 
+{ number: 9, clue: "Universitetsstad norr om Stockholm" }, 
+{ number: 10, clue: "Tusen kilo" }, 
+{ number: 11, clue: "överst på vattnet" }, 
 ]
 };
 
