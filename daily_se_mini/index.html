@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Daily SE Mini Saturday, 2026-10-24</title>
+<title>Daily SE Mini Sunday, 2026-10-25</title>
 
 <style>
     body {
@@ -91,15 +91,17 @@
 </head>
 <body>
 
-<h2>Daily SE Mini Saturday, 2026-10-24</h2>
+<h2>Daily SE Mini Sunday, 2026-10-25</h2>
 
 <div id="grid"></div>
 
 <button id="validateBtn">Validate</button>
 
 <div id="clues">
-    <h3>Clues</h3>
-    <ul id="clueList"></ul>
+    <h3>Horizotnal</h3>
+    <ul id="horizontalClueList"></ul>
+    <h3>Vertical</h3>
+    <ul id="verticalClueList"></ul>
 </div>
 
 <script>
@@ -110,29 +112,30 @@ const crossword = {
 	cols: 10, 
 	rows: 10, 
 solution: [ 
-		[null, null, null, "7", null, null, null, "2", null, null, ],
-		[null, null, "5", "k", "a", "n", "a", "d", "a", null, ],
-		[null, null, "8", "r", "4", "m", "a", "r", "s", null, ],
-		[null, null, "b", "i", null, null, "12", "i", "d", null, ],
-		[null, null, "e", "s", null, null, "3", "v", "10", null, ],
-		[null, null, "k", null, null, "1", "t", "a", "k", null, ],
-		[null, null, "a", null, "9", "r", "o", null, "ö", null, ],
-		[null, "6", "n", "a", "k", "e", "n", null, "n", null, ],
-		["11", "s", "t", "o", "r", "e", null, null, null, null, ],
+		[null, null, null, null, null, null, null, "10", null, null, ],
+		[null, null, null, null, null, null, "2", "e", null, null, ],
+		[null, "3", "i", "n", "d", "i", "e", "n", null, null, ],
+		[null, "8", "a", "t", "l", "a", "s", null, "9", null, ],
+		[null, "6", "j", "o", "n", "a", "t", "a", "n", null, ],
+		[null, null, "4", "h", "a", "l", "l", "e", "y", null, ],
+		[null, "7", "s", "k", "a", "r", "a", null, "x", null, ],
+		["1", "c", "o", "r", "t", "a", "n", "a", null, null, ],
+		["5", "e", "d", "m", "u", "n", "d", null, null, null, ],
 		[null, null, null, null, null, null, null, null, null, null, ],
 	],
-clues: [{ number: 1, clue: "Överst på huset" }, 
-{ number: 2, clue: "____ ett företag" }, 
-{ number: 3, clue: "Tusen kilo" }, 
-{ number: 4, clue: "Planet och månad" }, 
-{ number: 5, clue: "Världens näst största land" }, 
-{ number: 6, clue: "Utan kläder" }, 
-{ number: 7, clue: "Svår tid" }, 
-{ number: 8, clue: "Känner man lite" }, 
-{ number: 9, clue: "lugn och ____" }, 
-{ number: 10, clue: "Man eller kvinna" }, 
-{ number: 11, clue: "Karl den ____" }, 
-{ number: 12, clue: "Kort med ditt namn" }, 
+horizontalClues: [
+{ number: 1, clue: "ai i Halo" }, 
+{ number: 3, clue: "land med Taj Mahal" }, 
+{ number: 4, clue: "komet uppkallad efter astronom" }, 
+{ number: 5, clue: "brodern som förrådde familjen" }, 
+{ number: 6, clue: "modig bror i Nangijala" }, 
+{ number: 7, clue: "västgötsk domkyrkostad" }, 
+{ number: 8, clue: "robot i Portal" }, 
+],  
+verticalClues: [
+{ number: 2, clue: "baltiskt land" }, 
+{ number: 9, clue: "nattens gudinna" }, 
+{ number: 10, clue: "barrväxt med bär" }, 
 ]
 };
 
@@ -171,11 +174,18 @@ for (let r = 0; r < crossword.rows; r++) {
 // ------------------------------
 // Display clues
 // ------------------------------
-const clueList = document.getElementById("clueList");
-crossword.clues.forEach(cl => {
+const horizontalClueList = document.getElementById("horizontalClueList");
+crossword.horizontalClues.forEach(cl => {
     const li = document.createElement("li");
     li.textContent = `${cl.number}: ${cl.clue}`;
-    clueList.appendChild(li);
+    horizontalClueList.appendChild(li);
+});
+
+const verticalClueList = document.getElementById("verticalClueList");
+crossword.verticalClues.forEach(cl => {
+    const li = document.createElement("li");
+    li.textContent = `${cl.number}: ${cl.clue}`;
+    verticalClueList.appendChild(li);
 });
 
 // ------------------------------
@@ -189,12 +199,14 @@ document.getElementById("validateBtn").addEventListener("click", () => {
         const c = input.dataset.col;
         const correct = crossword.solution[r][c].toUpperCase();
 
-        if (input.value.toUpperCase() === correct) {
-            input.classList.remove("incorrect");
-            input.classList.add("correct");
-        } else {
-            input.classList.remove("correct");
-            input.classList.add("incorrect");
+        if (input.value != "") {
+            if (input.value.toUpperCase() === correct) {
+                input.classList.remove("incorrect");
+                input.classList.add("correct");
+            } else {
+                input.classList.remove("correct");
+                input.classList.add("incorrect");
+            }
         }
     });
 });
